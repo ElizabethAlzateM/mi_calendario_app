@@ -48,7 +48,7 @@ st.markdown("Desarrollado por: Elizabeth Alzate Murillo - Apoyo IA")
 st.markdown("Consulta fechas específicas de Colombia en tu calendario del 2025 al 2027.")
 
 
-ruta_excel = 'https://github.com/ElizabethAlzateM/mi_calendario_app/blob/main/Day_of_week.xlsx'
+ruta_excel = 'https://raw.githubusercontent.com/ElizabethAlzateM/mi_calendario_app/main/Day_of_week.xlsx'
 nombre_columna_fecha = 'Fecha'
 
 # Leer el DataFrame al inicio de la aplicación
