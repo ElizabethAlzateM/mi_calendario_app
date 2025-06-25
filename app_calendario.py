@@ -23,7 +23,7 @@ from datetime import datetime
 @st.cache_data # Cachea los datos para que no se lean repetidamente cada vez que la app se actualiza
 def leer_excel(ruta_archivo_excel, nombre_hoja=0, encabezado=0):
     try:
-        df = pd.read_excel(ruta_archivo_excel, sheet_name=nombre_hoja, header=encabezado)
+        df = pd.read_excel(ruta_archivo_excel, sheet_name='Fechas', header=encabezado, engine='openpyxl')
         return df
     except FileNotFoundError:
         st.error(f"Error: El archivo '{ruta_archivo_excel}' no fue encontrado. Verifica la ruta.")
@@ -34,7 +34,7 @@ def leer_excel(ruta_archivo_excel, nombre_hoja=0, encabezado=0):
     except Exception as e:
         st.error(f"Ocurrió un error inesperado al leer el archivo: {e}")
         return None
-
+        
 # --- CONFIGURACIÓN DE LA APLICACIÓN STREAMLIT ---
 
 st.set_page_config(
